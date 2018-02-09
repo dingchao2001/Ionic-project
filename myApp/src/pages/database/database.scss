@@ -1,0 +1,90 @@
+page-database {
+  $modal-size: 20vw;
+  .segment-ios .segment-button {
+    border: 0;
+    color: #333;
+    font-size: 15px;
+    height: 40px;
+    &.segment-activated {
+      color: #32a7e3;
+      background: #fff;
+      border-bottom: 3px solid #32a7e3;
+    }
+  }
+  .toolbar {
+    .searchbar-ios {
+      .searchbar-input {
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+      }
+    }
+  }
+  .item-divider-ios {
+    font-size: 16px;
+    color: #666;
+  }
+  .item-ios h2 {
+    font-size: 14px;
+    color: #333;
+  }
+  ion-item-group {
+    .item-block {
+      padding-left: 19px;
+      height: 50px;
+      border-bottom: 1px solid #f4f4f4;
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+  #letter {
+    width: 5%;
+    position: fixed;
+    top: 30%;
+    right: 6%;
+    z-index: 100;
+    text-align: center;
+    .indexed-item {
+      font-family: "Arial";
+      font-size: 13px;
+      color: #999;
+      transition: all .3s ease-out;
+      margin: 2px 0;
+      cursor: pointer;
+      &.activate {
+        transform: scale(1.2);
+        color: #000;
+      }
+    }
+  }
+  .modal {
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    position: fixed;
+    pointer-events: none;
+    width: $modal-size;
+    height: $modal-size;
+    line-height: $modal-size;
+    margin-left: -($modal-size * 0.5);
+    margin-top: -($modal-size * 0.5);
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.52);
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.16);
+    transition: opacity .5s;
+    opacity: 0;
+    &.show {
+      opacity: 1
+    }
+  }
+  .fab {
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(to right bottom, #54d0f9, #36ace6);
+    box-shadow: 0 0 20px rgba(#36ace6, 0.5);
+  }
+}

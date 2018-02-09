@@ -1,0 +1,11 @@
+page-build-company {
+    #buildCompany {
+        ion-label {
+            &.label {
+                &::after {
+                    content: ':'
+                }
+            }
+        }
+    }
+}

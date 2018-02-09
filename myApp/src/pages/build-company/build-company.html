@@ -1,0 +1,127 @@
+
+<ion-header>
+
+  <ion-navbar color="headerBg">
+    <ion-title>新建企业</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="buildCompany">
+  <ion-list>
+     <ion-item>
+        <ion-label>企业信息</ion-label>
+        <ion-select [(ngModel)]="paramObj.info" okText="确认" cancelText="取消" interface='action-sheet'>
+          <ion-option >级别1</ion-option>
+          <ion-option >级别2</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item no-lines>
+        <ion-label color="primary">企业名称</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.name1" clearInput="true" item-right placeholder="必填"></ion-input>
+    </ion-item>
+    <ion-item no-lines>
+        <ion-label>公司成立时间</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" cancelText="取消" doneText="确认" max="2020-10-31" bindon-ngModel="paramObj.time"></ion-datetime>
+    </ion-item>
+    <ion-item no-lines>
+        <ion-label>公司类型</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.type" placeholder="必填"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>主要产品和服务</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.name" placeholder="必填"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>注册资金</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.money" ></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>地区</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.city" placeholder="必填"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>地址</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.address"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>数据来源</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.resource" placeholder="必填"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>企业邮箱</ion-label>
+        <ion-input type="email" [(ngModel)]="paramObj.email"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>企业网站</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.web"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>企业电话</ion-label>
+        <ion-input type="number" [(ngModel)]="paramObj.tel"></ion-input>
+    </ion-item>
+
+    <ion-list-header>
+      联系人信息
+    </ion-list-header>
+    <ion-item no-lines>
+        <ion-label>联系人姓名</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.a" ></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人职位</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.b"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人电话</ion-label>
+        <ion-input type="number" [(ngModel)]="paramObj.c"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人微信</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.d"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人邮箱</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.e"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人性格</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.f"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人脾气</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.fa"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>联系人兴趣</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.fb"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>共同负责的人</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.fc"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>备注</ion-label>
+        <ion-input type="text" [(ngModel)]="paramObj.fd"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

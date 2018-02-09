@@ -1,0 +1,113 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>project-details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list  class="fillInlist">
+    <ion-item class="sm-headline">
+      <ion-icon name="my-project" md="md-my-project" color="primary" class="sm-icon"></ion-icon>项目信息
+      <ion-icon name="ios-arrow-down" item-right *ngIf="!isShow" (click)="isShow=!isShow" class="arrow"></ion-icon>
+      <ion-icon name="ios-arrow-forward" item-right *ngIf="isShow" (click)="isShow=!isShow" class="arrow"></ion-icon>
+    </ion-item>
+    <ion-list *ngIf="!isShow">
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目名称</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目类型</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>业务类型</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目收集时间</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" min="2000" max="2030-10-31" cancelText="取消" doneText="确定"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目创建人</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>重要级别</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目地区</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>站点地址</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>数据来源</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>甲方公司</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>中标单位名称</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>业主客户名称</ion-label>
+        <ion-input type="text" item-right></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  <ion-list  class="fillInlist">
+    <ion-item class="sm-headline">
+      <ion-icon name="my-project" md="md-my-project" color="primary" class="sm-icon"></ion-icon>项目合同信息
+      <ion-icon name="ios-arrow-down" item-right *ngIf="!isShow1" (click)="isShow1=!isShow1" class="arrow"></ion-icon>
+      <ion-icon name="ios-arrow-forward" item-right *ngIf="isShow1" (click)="isShow1=!isShow1" class="arrow"></ion-icon>
+    </ion-item>
+    <ion-list *ngIf="!isShow1">
+      <div>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同签订时间</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD" min="2000" max="2030-10-31" cancelText="取消" doneText="确定"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同开始时间</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD" min="2000" max="2030-10-31" cancelText="取消" doneText="确定"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同结束时间</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD" min="2000" max="2030-10-31" cancelText="取消" doneText="确定"></ion-datetime>
+        </ion-item>
+      </div>
+
+      <!-- <my-radio buttonColor='#32db64' title='业主的合同'>
+      </my-radio>
+      <my-radio buttonColor='#32db64' title='与中标单位的合同' option1='无' option2='有'>
+      </my-radio>
+      <my-radio buttonColor='#32db64' title='甲方与业主的合同' option1='无' option2='有'>
+      </my-radio> -->
+    </ion-list>
+  </ion-list>
+</ion-content>

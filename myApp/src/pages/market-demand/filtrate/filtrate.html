@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>筛选</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="submit" (click)="submit()">
+        确定
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list class="edit_pd">
+    <ion-item (click)="showAreasSelect()">
+      <ion-label color="thinGrey">选择地区</ion-label>
+      <ion-input [(ngModel)]="city" readonly></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label color="thinGrey">开始时间</ion-label>
+      <<ion-datetime displayFormat="YYYY-MM-DD" cancelText="取消" doneText="确认" max="2020-10-31" bindon-ngModel="startTime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="thinGrey">结束时间</ion-label>
+      <<ion-datetime displayFormat="YYYY-MM-DD" cancelText="取消" doneText="确认" max="2020-10-31" bindon-ngModel="endTime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>是否按热点度排序</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<areas-select #areasSelect [level]="3" (cancel)="closeSelect()" (done)="done($event)"></areas-select>
